@@ -17,23 +17,26 @@ public class TestRunner {
 	@BeforeTest
 	public void browser() throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shashi\\Desktop\\Jars\\chromedriver_win32\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shashi\\Desktop\\Jars\\chromedriver_win32\\chromedriver.exe");
 		 driver=new ChromeDriver();
 		 driver.get("http://Newtours.Demoaut.Com/");
-		 Thread.sleep(500);
+		 Thread.sleep(500);*/
+		System.out.println("before");
 	}
 	@Test
 	public void runTest()
 	{
-		LoginPageImpl login=new LoginPageImpl();
-		login.LoginPageExe(driver);
+		/*LoginPageImpl login=new LoginPageImpl();
+		login.LoginPageExe(driver);*/
+		System.out.println("test");
 	}
 	
 	@AfterTest
 	public void afterTest()
 	{
-		GenricFunctions functions=new GenricFunctions();
-		functions.reportFlush();
+		/*GenricFunctions functions=new GenricFunctions();
+		functions.reportFlush();*/
+		System.out.println("After");
 	}
 
 }
