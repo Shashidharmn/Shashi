@@ -10,7 +10,7 @@ import com.shashi.reports.UserReport;
 public class GenricFunctions {
 	
 	static UserReport report=new UserReport();
-	static ExtentTest test=report.UserReport();;
+	static ExtentTest test=report.UserReports();;
 	public GenricFunctions() {
 		
 		

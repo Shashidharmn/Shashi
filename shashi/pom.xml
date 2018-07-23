@@ -14,8 +14,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    
+   <!--   <java-version>1.8</java-version>
+
+        <maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
+      <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target> -->
   </properties>
 
   <dependencies>
@@ -24,7 +28,7 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>6.14.3</version>
-    <scope>test</scope>
+ <!--   <scope>test</scope> --> 
 </dependency>
     <dependency>
     <groupId>com.aventstack</groupId>
@@ -59,6 +63,25 @@
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+       <!--  <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <fork>true</fork>
+                      <executable>C:\Program Files\Java\jre1.8.0_171\bin\javac</executable>
+                </configuration>
+            </plugin>-->
+    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.5.1</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>  
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
@@ -68,14 +91,29 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
-        </plugin>
+    
+    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.19.1</version>
+			<configuration>
+				<suiteXmlFiles>
+				<!-- TestNG suite XML files -->
+					<suiteXmlFile>testng.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+	</plugin>
+<!-- <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.12</version>
+    <configuration>
+      <suiteXmlFiles>
+        <suiteXmlFile>shashi/testng.xml</suiteXmlFile>
+      </suiteXmlFiles>
+    </configuration>
+  </plugin>-->
+
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
