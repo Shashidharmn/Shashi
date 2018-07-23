@@ -36,7 +36,7 @@ public class TestRunner {
 	{
 		/*GenricFunctions functions=new GenricFunctions();
 		functions.reportFlush();*/
-		System.out.println("After");
+		System.out.println("After1");
 	}
 
 }
