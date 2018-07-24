@@ -15,6 +15,7 @@ public class LoginPageImpl extends MainImpl implements LoginPage {
 		
 		System.out.println(UserName);
 		imp.setData(driver.findElement(By.name(UserName)), "Shashi");
+		System.out.println("-------------------------"+driver.getTitle()+"--------------------");
 
 	}
 
