@@ -19,7 +19,7 @@ public class TestRunner {
 		 driver=new ChromeDriver();
 		 driver.get("http://Newtours.Demoaut.Com/");
 		 Thread.sleep(500);
-		System.out.println("before");
+		System.out.println("before test");
 	}
 	@Test
 	public void runTest()
