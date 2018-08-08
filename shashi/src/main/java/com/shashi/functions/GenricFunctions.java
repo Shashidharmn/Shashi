@@ -20,7 +20,7 @@ public class GenricFunctions {
 	{
 		element.sendKeys(data);
 		
-		test.log(Status.INFO, "Setting "+ data+" to "+element);
+		test.log(Status.INFO, "Setting "+ data+" to "+element.getLocation()+"   "+element.getRect()+" "+element.getCssValue("font"));
 		
 		
 	}
